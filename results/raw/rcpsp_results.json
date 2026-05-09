@@ -1,0 +1,59 @@
+{
+  "problem": "rcpsp",
+  "problem_display": "RCPSP",
+  "metric": "average makespan",
+  "direction": "min",
+  "sizes": [
+    30
+  ],
+  "t_aco": [
+    1
+  ],
+  "methods": [
+    "deepaco"
+  ],
+  "seed": 12345,
+  "limit_instances": 1,
+  "environment": {
+    "timestamp": "2026-05-09T23:33:31",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.8.20",
+    "torch": "1.7.0+cu110",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "device_used": "cpu",
+    "cwd": "C:\\Users\\86136\\Desktop\\DeepACO"
+  },
+  "runs": [
+    {
+      "problem": "rcpsp",
+      "problem_display": "RCPSP",
+      "scale": 30,
+      "scale_label": "j30",
+      "method": "deepaco",
+      "method_label": "DeepACO",
+      "direction": "min",
+      "metric": "average makespan",
+      "t_aco": [
+        1
+      ],
+      "dataset_instances": 100,
+      "instances": 1,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/rcpsp/rcpsp30-5.pt",
+      "dataset_path": "data/rcpsp/j30rcp",
+      "values": [
+        52.0
+      ],
+      "duration_seconds": 0.08878493309020996,
+      "status": "ok"
+    }
+  ],
+  "outputs": {
+    "raw": "results/raw/rcpsp_results.json",
+    "table": "results/tables/rcpsp_table.md",
+    "figure": "results/figures/rcpsp_comparison.png",
+    "log": "logs/rcpsp.log"
+  }
+}

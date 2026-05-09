@@ -1,0 +1,59 @@
+{
+  "problem": "mkp_transformer",
+  "problem_display": "MKP-Transformer",
+  "metric": "average objective",
+  "direction": "max",
+  "sizes": [
+    300
+  ],
+  "t_aco": [
+    1
+  ],
+  "methods": [
+    "deepaco"
+  ],
+  "seed": 12345,
+  "limit_instances": 1,
+  "environment": {
+    "timestamp": "2026-05-09T23:30:43",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.8.20",
+    "torch": "1.7.0+cu110",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "device_used": "cpu",
+    "cwd": "C:\\Users\\86136\\Desktop\\DeepACO"
+  },
+  "runs": [
+    {
+      "problem": "mkp_transformer",
+      "problem_display": "MKP-Transformer",
+      "scale": 300,
+      "scale_label": "300",
+      "method": "deepaco",
+      "method_label": "DeepACO-Transformer",
+      "direction": "max",
+      "metric": "average objective",
+      "t_aco": [
+        1
+      ],
+      "dataset_instances": 100,
+      "instances": 1,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/mkp_transformer/mkp300.pt",
+      "dataset_path": "data/mkp_transformer/testDataset-300.pt",
+      "values": [
+        59.434364318847656
+      ],
+      "duration_seconds": 0.35050010681152344,
+      "status": "ok"
+    }
+  ],
+  "outputs": {
+    "raw": "results/raw/mkp_transformer_results.json",
+    "table": "results/tables/mkp_transformer_table.md",
+    "figure": "results/figures/mkp_transformer_comparison.png",
+    "log": "logs/mkp_transformer.log"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "problem": "tsp",
+  "problem_display": "TSP",
+  "metric": "average cost",
+  "direction": "min",
+  "sizes": [
+    20
+  ],
+  "t_aco": [
+    1
+  ],
+  "methods": [
+    "deepaco"
+  ],
+  "seed": 12345,
+  "limit_instances": 1,
+  "environment": {
+    "timestamp": "2026-05-09T23:29:14",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.8.20",
+    "torch": "1.7.0+cu110",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "device_used": "cpu",
+    "cwd": "C:\\Users\\86136\\Desktop\\DeepACO"
+  },
+  "runs": [
+    {
+      "problem": "tsp",
+      "problem_display": "TSP",
+      "scale": 20,
+      "scale_label": "20",
+      "method": "deepaco",
+      "method_label": "DeepACO",
+      "direction": "min",
+      "metric": "average cost",
+      "t_aco": [
+        1
+      ],
+      "dataset_instances": 1280,
+      "instances": 1,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/tsp/tsp20.pt",
+      "dataset_path": "data/tsp/testDataset-20.pt",
+      "values": [
+        3.4536166191101074
+      ],
+      "duration_seconds": 0.056807518005371094,
+      "status": "ok"
+    }
+  ],
+  "outputs": {
+    "raw": "results/raw/tsp_results.json",
+    "table": "results/tables/tsp_table.md",
+    "figure": "results/figures/tsp_comparison.png",
+    "log": "logs/tsp.log"
+  }
+}

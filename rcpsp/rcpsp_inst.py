@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import List, Optional, Union, Tuple
 from queue import LifoQueue
 import numpy as np
@@ -228,8 +230,8 @@ def adjlist_to_edge_index(adjlist):
     for src, tgts in enumerate(adjlist):
         sources.append(torch.tensor(src, dtype = torch.long).expand(len(tgts)))
         targets.append(torch.tensor(tgts, dtype = torch.long))
-    sources = torch.concat(sources)
-    targets = torch.concat(targets)
+    sources = torch.cat(sources)
+    targets = torch.cat(targets)
     edge_index = torch.stack([sources, targets])
     return edge_index
 

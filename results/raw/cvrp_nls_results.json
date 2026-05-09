@@ -1,0 +1,57 @@
+{
+  "problem": "cvrp_nls",
+  "problem_display": "CVRP-NLS",
+  "metric": "average route length",
+  "direction": "min",
+  "sizes": [
+    100
+  ],
+  "t_aco": [
+    1
+  ],
+  "methods": [
+    "deepaco"
+  ],
+  "seed": 12345,
+  "limit_instances": 1,
+  "environment": {
+    "timestamp": "2026-05-09T23:32:01",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.8.20",
+    "torch": "1.7.0+cu110",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "device_used": "cpu",
+    "cwd": "C:\\Users\\86136\\Desktop\\DeepACO"
+  },
+  "runs": [
+    {
+      "problem": "cvrp_nls",
+      "problem_display": "CVRP-NLS",
+      "scale": 100,
+      "scale_label": "100",
+      "method": "deepaco",
+      "method_label": "DeepACO-NLS",
+      "direction": "min",
+      "metric": "average route length",
+      "t_aco": [
+        1
+      ],
+      "dataset_instances": 100,
+      "instances": 1,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/cvrp_nls/cvrp100.pt",
+      "dataset_path": "data/cvrp_nls/testDataset-100.pt",
+      "status": "error",
+      "error": "OSError: [WinError 193] %1 不是有效的 Win32 应用程序。",
+      "traceback": "Traceback (most recent call last):\n  File \"scripts\\reproduce_problem.py\", line 356, in append_evaluation\n  File \"C:\\Users\\86136\\Desktop\\DeepACO\\.venv\\lib\\site-packages\\torch\\autograd\\grad_mode.py\", line 26, in decorate_context\n    return func(*args, **kwargs)\n  File \"scripts\\reproduce_problem.py\", line 279, in test_dataset\n  File \"scripts\\reproduce_problem.py\", line 607, in infer\n  File \"C:\\Users\\86136\\Desktop\\DeepACO\\.venv\\lib\\site-packages\\torch\\autograd\\grad_mode.py\", line 26, in decorate_context\n    return func(*args, **kwargs)\n  File \"C:\\Users\\86136\\Desktop\\DeepACO\\cvrp_nls\\aco.py\", line 145, in run\n    self.multiple_swap_star(paths, indexes=indexes)\n  File \"C:\\Users\\86136\\Desktop\\DeepACO\\.venv\\lib\\site-packages\\torch\\autograd\\grad_mode.py\", line 26, in decorate_context\n    return func(*args, **kwargs)\n  File \"C:\\Users\\86136\\Desktop\\DeepACO\\cvrp_nls\\aco.py\", line 126, in multiple_swap_star\n    paths[:, i] = merge_subroutes(future.result(), paths.size(0), self.device)\n  File \"C:\\Users\\86136\\AppData\\Roaming\\uv\\python\\cpython-3.8.20-windows-x86_64-none\\lib\\concurrent\\futures\\_base.py\", line 437, in result\n    return self.__get_result()\n  File \"C:\\Users\\86136\\AppData\\Roaming\\uv\\python\\cpython-3.8.20-windows-x86_64-none\\lib\\concurrent\\futures\\_base.py\", line 389, in __get_result\n    raise self._exception\n  File \"C:\\Users\\86136\\AppData\\Roaming\\uv\\python\\cpython-3.8.20-windows-x86_64-none\\lib\\concurrent\\futures\\thread.py\", line 57, in run\n    result = self.fn(*self.args, **self.kwargs)\n  File \"C:\\Users\\86136\\Desktop\\DeepACO\\cvrp_nls\\aco.py\", line 445, in neural_swapstar\n    p1 = swapstar(demand, distances, positions, p0, count = limit)\n  File \"C:\\Users\\86136\\Desktop\\DeepACO\\cvrp_nls\\swapstar.py\", line 326, in swapstar\n    hgs_solver = Solver(parameters=ap, verbose=False)\n  File \"C:\\Users\\86136\\Desktop\\DeepACO\\cvrp_nls\\swapstar.py\", line 137, in __init__\n    hgs_library = CDLL(HGS_LIBRARY_FILEPATH, winmode=0)\n  File \"C:\\Users\\86136\\AppData\\Roaming\\uv\\python\\cpython-3.8.20-windows-x86_64-none\\lib\\ctypes\\__init__.py\", line 373, in __init__\n    self._handle = _dlopen(self._name, mode)\nOSError: [WinError 193] %1 不是有效的 Win32 应用程序。\n"
+    }
+  ],
+  "outputs": {
+    "raw": "results/raw/cvrp_nls_results.json",
+    "table": "results/tables/cvrp_nls_table.md",
+    "figure": "results/figures/cvrp_nls_comparison.png",
+    "log": "logs/cvrp_nls.log"
+  }
+}

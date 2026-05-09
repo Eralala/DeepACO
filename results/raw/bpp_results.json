@@ -1,0 +1,59 @@
+{
+  "problem": "bpp",
+  "problem_display": "BPP",
+  "metric": "average fitness",
+  "direction": "max",
+  "sizes": [
+    120
+  ],
+  "t_aco": [
+    1
+  ],
+  "methods": [
+    "deepaco"
+  ],
+  "seed": 12345,
+  "limit_instances": 1,
+  "environment": {
+    "timestamp": "2026-05-09T23:30:24",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.8.20",
+    "torch": "1.7.0+cu110",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "device_used": "cpu",
+    "cwd": "C:\\Users\\86136\\Desktop\\DeepACO"
+  },
+  "runs": [
+    {
+      "problem": "bpp",
+      "problem_display": "BPP",
+      "scale": 120,
+      "scale_label": "120",
+      "method": "deepaco",
+      "method_label": "DeepACO",
+      "direction": "max",
+      "metric": "average fitness",
+      "t_aco": [
+        1
+      ],
+      "dataset_instances": 100,
+      "instances": 1,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/bpp/bpp120.pt",
+      "dataset_path": "data/bpp/testDataset-120.pt",
+      "values": [
+        0.9304388761520386
+      ],
+      "duration_seconds": 2.2288670539855957,
+      "status": "ok"
+    }
+  ],
+  "outputs": {
+    "raw": "results/raw/bpp_results.json",
+    "table": "results/tables/bpp_table.md",
+    "figure": "results/figures/bpp_comparison.png",
+    "log": "logs/bpp.log"
+  }
+}

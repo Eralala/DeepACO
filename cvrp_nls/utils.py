@@ -51,8 +51,8 @@ def gen_pyg_data(demands, distances, device, k_sparse=5):
         torch.arange(1, n, device=device, dtype=torch.long),
         torch.zeros(n-1, device=device, dtype=torch.long), 
     ])
-    edge_index = torch.concat([edge_index_1, edge_index_2, edge_index_3], dim=1)
-    edge_attr = torch.concat([edge_attr_1, edge_attr_2, edge_attr_2])
+    edge_index = torch.cat([edge_index_1, edge_index_2, edge_index_3], dim=1)
+    edge_attr = torch.cat([edge_attr_1, edge_attr_2, edge_attr_2])
 
     x = demands
     pyg_data = Data(x=x.unsqueeze(1).float(), edge_attr=edge_attr.float(), edge_index=edge_index)

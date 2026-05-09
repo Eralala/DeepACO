@@ -365,22 +365,22 @@ class ACO():
                 continue
             # remove node1 from sr1
             cost = self.distances[pred1, next1] - self.distances[pred1, node1] - self.distances[node1, next1]
-            sr1_mod = torch.concat([sr1[:node1_index], sr1[node1_index+1:]])
+            sr1_mod = torch.cat([sr1[:node1_index], sr1[node1_index+1:]])
             # choose a node from sr2
             avaliable_index = torch.arange(len(sr2))[avaliable]
             node2_index = np.random.choice(avaliable_index)
             pred2, node2, next2 = sr2[node2_index-1: node2_index+2]
             # remove node2 from sr2
             cost += self.distances[pred2, next2] - self.distances[pred2, node2] - self.distances[node2, next2]
-            sr2_mod = torch.concat([sr2[:node2_index], sr2[node2_index+1:]])
+            sr2_mod = torch.cat([sr2[:node2_index], sr2[node2_index+1:]])
             # insert node1 into sr2_mod
             loc1, inscost1 = self.insertion_single(sr2_mod, node1)
             cost += inscost1
-            sr2_mod = torch.concat([sr2_mod[:loc1+1], node1.unsqueeze(0), sr2_mod[loc1+1:]])
+            sr2_mod = torch.cat([sr2_mod[:loc1+1], node1.unsqueeze(0), sr2_mod[loc1+1:]])
             # insert node2 into sr1_mod
             loc2, inscost2 = self.insertion_single(sr1_mod, node2)
             cost += inscost2
-            sr1_mod = torch.concat([sr1_mod[:loc2+1], node2.unsqueeze(0), sr1_mod[loc2+1:]])
+            sr1_mod = torch.cat([sr1_mod[:loc2+1], node2.unsqueeze(0), sr1_mod[loc2+1:]])
             if cost < best_insertion[1]:
                 best_insertion = ((sr1_index, sr1_mod, sr2_index, sr2_mod), cost)
 

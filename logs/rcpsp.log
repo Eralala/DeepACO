@@ -1,0 +1,7 @@
+[2026-05-09T23:33:31] Starting RCPSP reproduction
+[2026-05-09T23:33:31] sizes=[30], t_aco=[1], methods=['deepaco'], device=cpu
+[2026-05-09T23:33:34] RCPSP j30: 1/100 instances
+[2026-05-09T23:33:34] Finished RCPSP j30 DeepACO in 0.09s
+[2026-05-09T23:33:35] Wrote raw results: results/raw/rcpsp_results.json
+[2026-05-09T23:33:35] Wrote table: results/tables/rcpsp_table.md
+[2026-05-09T23:33:35] Wrote figure: results/figures/rcpsp_comparison.png

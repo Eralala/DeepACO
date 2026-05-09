@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import torch
 from torch.distributions import Categorical
 from typing import Optional
