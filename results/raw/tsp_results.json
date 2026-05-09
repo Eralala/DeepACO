@@ -15,7 +15,7 @@
   "seed": 12345,
   "limit_instances": 1,
   "environment": {
-    "timestamp": "2026-05-09T23:29:14",
+    "timestamp": "2026-05-10T00:08:10",
     "platform": "Windows-10-10.0.26200-SP0",
     "python": "3.8.20",
     "torch": "1.7.0+cu110",
@@ -46,7 +46,7 @@
       "values": [
         3.4536166191101074
       ],
-      "duration_seconds": 0.056807518005371094,
+      "duration_seconds": 0.03353404998779297,
       "status": "ok"
     }
   ],

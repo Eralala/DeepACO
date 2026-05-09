@@ -10,6 +10,7 @@ import sys
 import time
 import traceback
 from datetime import datetime
+from numbers import Integral
 from pathlib import Path
 from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence
 
@@ -1038,9 +1039,33 @@ RUNNERS: Dict[str, Callable[..., List[Dict[str, Any]]]] = {
 }
 
 
+def normalize_int_sequence(value: Any, default: Sequence[int], name: str) -> List[int]:
+    if value is None or value == "":
+        return list(default)
+    if isinstance(value, Integral):
+        return [int(value)]
+    if isinstance(value, str):
+        items = [part.strip() for part in value.split(",") if part.strip()]
+        return [int(item) for item in items] or list(default)
+    try:
+        items = list(value)
+    except TypeError as exc:
+        raise TypeError(f"{name} must be an int or an iterable of ints, got {type(value).__name__}") from exc
+    return [int(item) for item in items] or list(default)
+
+
+def normalize_method_sequence(methods: Any) -> Optional[List[str]]:
+    if methods is None or methods == "":
+        return None
+    if isinstance(methods, str):
+        return [part.strip().lower() for part in methods.split(",") if part.strip()]
+    return [str(method).strip().lower() for method in methods if str(method).strip()]
+
+
 def select_methods(spec: Dict[str, Any], methods: Optional[Sequence[str]], include_baseline: bool) -> List[str]:
-    if methods:
-        selected = [method.lower() for method in methods]
+    normalized_methods = normalize_method_sequence(methods)
+    if normalized_methods:
+        selected = normalized_methods
     else:
         selected = list(spec["methods"])
     if not include_baseline:
@@ -1178,8 +1203,8 @@ def run_problem(
         raise ValueError(f"Unknown problem '{problem}'. Available: {', '.join(PROBLEMS)}")
 
     spec = PROBLEMS[problem]
-    selected_sizes = list(sizes or spec["sizes"])
-    selected_t_aco = list(t_aco or spec["t_aco"])
+    selected_sizes = normalize_int_sequence(sizes, spec["sizes"], "sizes")
+    selected_t_aco = normalize_int_sequence(t_aco, spec["t_aco"], "t_aco")
     selected_methods = select_methods(spec, methods, include_baseline)
     resolved_device = resolve_device(device, spec["device"])
 
