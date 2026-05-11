@@ -325,6 +325,7 @@ name = "deepaco"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "matplotlib" },
     { name = "networkx" },
     { name = "numba" },
     { name = "numpy" },
@@ -348,6 +349,7 @@ requires-dist = [
     { name = "d2l", marker = "extra == 'notebooks'" },
     { name = "ipykernel", marker = "extra == 'notebooks'", specifier = ">=6,<7" },
     { name = "jupyter", marker = "extra == 'notebooks'", specifier = ">=1,<2" },
+    { name = "matplotlib", specifier = ">=3.7.5" },
     { name = "matplotlib", marker = "extra == 'notebooks'", specifier = ">=3.5,<4" },
     { name = "networkx", specifier = "==2.8.4" },
     { name = "numba", specifier = "==0.56.4" },

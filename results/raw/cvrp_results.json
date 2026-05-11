@@ -4,25 +4,34 @@
   "metric": "average objective",
   "direction": "min",
   "sizes": [
-    20
+    20,
+    100,
+    500
   ],
   "t_aco": [
-    1
+    1,
+    10,
+    20,
+    30,
+    40,
+    50,
+    100
   ],
   "methods": [
-    "deepaco"
+    "deepaco",
+    "aco"
   ],
   "seed": 12345,
-  "limit_instances": 1,
+  "limit_instances": null,
   "environment": {
-    "timestamp": "2026-05-09T23:30:09",
-    "platform": "Windows-10-10.0.26200-SP0",
+    "timestamp": "2026-05-11T09:46:20",
+    "platform": "Windows-10-10.0.22621-SP0",
     "python": "3.8.20",
     "torch": "1.7.0+cu110",
     "cuda_available": true,
-    "cuda_device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "cuda_device": "NVIDIA GeForce RTX 2060",
     "device_used": "cpu",
-    "cwd": "C:\\Users\\86136\\Desktop\\DeepACO"
+    "cwd": "E:\\DeepAoc"
   },
   "runs": [
     {
@@ -35,18 +44,210 @@
       "direction": "min",
       "metric": "average objective",
       "t_aco": [
-        1
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
       ],
       "dataset_instances": 100,
-      "instances": 1,
+      "instances": 100,
       "n_ants": 20,
       "device": "cpu",
       "checkpoint": "pretrained/cvrp/cvrp20.pt",
       "dataset_path": "data/cvrp/testDataset-20.pt",
       "values": [
-        5.178827285766602
+        4.869528737068176,
+        4.6883533930778505,
+        4.663731777668,
+        4.658352618217468,
+        4.6557958745956425,
+        4.650347900390625,
+        4.647164044380188
       ],
-      "duration_seconds": 0.054106950759887695,
+      "duration_seconds": 130.45345449447632,
+      "status": "ok"
+    },
+    {
+      "problem": "cvrp",
+      "problem_display": "CVRP",
+      "scale": 20,
+      "scale_label": "20",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "min",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/cvrp/testDataset-20.pt",
+      "values": [
+        7.684350094795227,
+        6.805665001869202,
+        6.592073302268982,
+        6.5592121362686155,
+        6.545806541442871,
+        6.545806541442871,
+        6.5260078239440915
+      ],
+      "duration_seconds": 181.0830590724945,
+      "status": "ok"
+    },
+    {
+      "problem": "cvrp",
+      "problem_display": "CVRP",
+      "scale": 100,
+      "scale_label": "100",
+      "method": "deepaco",
+      "method_label": "DeepACO",
+      "direction": "min",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/cvrp/cvrp100.pt",
+      "dataset_path": "data/cvrp/testDataset-100.pt",
+      "values": [
+        16.265742835998534,
+        15.499553146362304,
+        15.309778394699096,
+        15.21325180053711,
+        15.161428852081299,
+        15.140604248046875,
+        15.03559157371521
+      ],
+      "duration_seconds": 528.3392400741577,
+      "status": "ok"
+    },
+    {
+      "problem": "cvrp",
+      "problem_display": "CVRP",
+      "scale": 100,
+      "scale_label": "100",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "min",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/cvrp/testDataset-100.pt",
+      "values": [
+        37.502058563232424,
+        34.42271696090698,
+        31.774223136901856,
+        28.527432765960693,
+        26.1034574508667,
+        24.71388891220093,
+        22.575743522644043
+      ],
+      "duration_seconds": 616.5111095905304,
+      "status": "ok"
+    },
+    {
+      "problem": "cvrp",
+      "problem_display": "CVRP",
+      "scale": 500,
+      "scale_label": "500",
+      "method": "deepaco",
+      "method_label": "DeepACO",
+      "direction": "min",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/cvrp/cvrp500.pt",
+      "dataset_path": "data/cvrp/testDataset-500.pt",
+      "values": [
+        66.60974475860596,
+        65.01221378326416,
+        64.11221084594726,
+        63.53834457397461,
+        63.21940486907959,
+        62.894612045288085,
+        62.4883283996582
+      ],
+      "duration_seconds": 3838.7105305194855,
+      "status": "ok"
+    },
+    {
+      "problem": "cvrp",
+      "problem_display": "CVRP",
+      "scale": 500,
+      "scale_label": "500",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "min",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/cvrp/testDataset-500.pt",
+      "values": [
+        187.78882293701173,
+        182.66707168579103,
+        179.7186080932617,
+        173.9627328491211,
+        159.56076293945313,
+        133.20369178771972,
+        85.26622657775879
+      ],
+      "duration_seconds": 3374.896984100342,
       "status": "ok"
     }
   ],

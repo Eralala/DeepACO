@@ -1,0 +1,11 @@
+[2026-05-10T17:09:33] Starting TSP-NLS reproduction
+[2026-05-10T17:09:33] sizes=[100, 500, 1000], t_aco=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], methods=['deepaco'], device=cuda:0
+[2026-05-10T17:09:39] TSP-NLS100: 1280/1280 instances, k_sparse=10
+[2026-05-10T17:59:52] Finished TSP-NLS 100 DeepACO-NLS in 3012.27s
+[2026-05-10T17:59:52] TSP-NLS500: 128/128 instances, k_sparse=50
+[2026-05-10T19:05:44] Finished TSP-NLS 500 DeepACO-NLS in 3951.18s
+[2026-05-10T19:05:44] TSP-NLS1000: 128/128 instances, k_sparse=100
+[2026-05-11T00:05:02] Finished TSP-NLS 1000 DeepACO-NLS in 17957.85s
+[2026-05-11T00:05:03] Wrote raw results: results/raw/tsp_nls_results.json
+[2026-05-11T00:05:03] Wrote table: results/tables/tsp_nls_table.md
+[2026-05-11T00:05:03] Wrote figure: results/figures/tsp_nls_comparison.png

@@ -1,7 +1,3 @@
-[2026-05-09T23:32:01] Starting CVRP-NLS reproduction
-[2026-05-09T23:32:01] sizes=[100], t_aco=[1], methods=['deepaco'], device=cpu
-[2026-05-09T23:32:03] CVRP-NLS100: 1/100 instances, k_sparse=10
-[2026-05-09T23:32:03] Error in CVRP-NLS 100 DeepACO-NLS: OSError: [WinError 193] %1 不是有效的 Win32 应用程序。
-[2026-05-09T23:32:04] Wrote raw results: results/raw/cvrp_nls_results.json
-[2026-05-09T23:32:04] Wrote table: results/tables/cvrp_nls_table.md
-[2026-05-09T23:32:04] Wrote figure: results/figures/cvrp_nls_comparison.png
+[2026-05-11T09:30:29] Starting CVRP-NLS reproduction
+[2026-05-11T09:30:29] sizes=[100, 500], t_aco=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], methods=['deepaco', 'aco'], device=cuda:0
+[2026-05-11T09:30:30] CVRP-NLS100: 100/100 instances, k_sparse=10

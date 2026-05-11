@@ -1,0 +1,260 @@
+{
+  "problem": "sop",
+  "problem_display": "SOP",
+  "metric": "average cost",
+  "direction": "min",
+  "sizes": [
+    20,
+    50,
+    100
+  ],
+  "t_aco": [
+    1,
+    10,
+    20,
+    30,
+    40,
+    50,
+    100
+  ],
+  "methods": [
+    "deepaco",
+    "aco"
+  ],
+  "seed": 12345,
+  "limit_instances": null,
+  "environment": {
+    "timestamp": "2026-05-10T17:10:01",
+    "platform": "Windows-10-10.0.22621-SP0",
+    "python": "3.8.20",
+    "torch": "1.7.0+cu110",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 2060",
+    "device_used": "cpu",
+    "cwd": "E:\\DeepAoc"
+  },
+  "runs": [
+    {
+      "problem": "sop",
+      "problem_display": "SOP",
+      "scale": 20,
+      "scale_label": "20",
+      "method": "deepaco",
+      "method_label": "DeepACO",
+      "direction": "min",
+      "metric": "average cost",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/sop/sop20.pt",
+      "dataset_path": "data/sop/test20.pkl",
+      "values": [
+        13.677800121307373,
+        13.358666725158692,
+        13.313695106506348,
+        13.29868863105774,
+        13.293067617416382,
+        13.282057161331176,
+        13.270440149307252
+      ],
+      "duration_seconds": 69.04911613464355,
+      "status": "ok"
+    },
+    {
+      "problem": "sop",
+      "problem_display": "SOP",
+      "scale": 20,
+      "scale_label": "20",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "min",
+      "metric": "average cost",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/sop/test20.pkl",
+      "values": [
+        15.738815813064575,
+        14.72847939491272,
+        14.49527801513672,
+        14.411384267807007,
+        14.389885244369507,
+        14.359668607711791,
+        14.338142948150635
+      ],
+      "duration_seconds": 70.94245433807373,
+      "status": "ok"
+    },
+    {
+      "problem": "sop",
+      "problem_display": "SOP",
+      "scale": 50,
+      "scale_label": "50",
+      "method": "deepaco",
+      "method_label": "DeepACO",
+      "direction": "min",
+      "metric": "average cost",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/sop/sop50.pt",
+      "dataset_path": "data/sop/test50.pkl",
+      "values": [
+        35.10797407150269,
+        34.342460269927976,
+        34.143589668273925,
+        34.0749147605896,
+        34.0334959602356,
+        34.01251256942749,
+        33.95697101593018
+      ],
+      "duration_seconds": 292.55576944351196,
+      "status": "ok"
+    },
+    {
+      "problem": "sop",
+      "problem_display": "SOP",
+      "scale": 50,
+      "scale_label": "50",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "min",
+      "metric": "average cost",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/sop/test50.pkl",
+      "values": [
+        42.18345001220703,
+        40.24785430908203,
+        39.72394824981689,
+        39.44655521392822,
+        39.336807823181154,
+        39.24891426086426,
+        38.99696914672852
+      ],
+      "duration_seconds": 286.1078543663025,
+      "status": "ok"
+    },
+    {
+      "problem": "sop",
+      "problem_display": "SOP",
+      "scale": 100,
+      "scale_label": "100",
+      "method": "deepaco",
+      "method_label": "DeepACO",
+      "direction": "min",
+      "metric": "average cost",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/sop/sop100.pt",
+      "dataset_path": "data/sop/test100.pkl",
+      "values": [
+        72.21344116210938,
+        70.96702125549317,
+        70.64755432128906,
+        70.49953346252441,
+        70.43051605224609,
+        70.37306503295899,
+        70.31611099243165
+      ],
+      "duration_seconds": 942.0349471569061,
+      "status": "ok"
+    },
+    {
+      "problem": "sop",
+      "problem_display": "SOP",
+      "scale": 100,
+      "scale_label": "100",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "min",
+      "metric": "average cost",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/sop/test100.pkl",
+      "values": [
+        87.61433631896972,
+        84.8940298461914,
+        83.84870468139648,
+        83.31836853027343,
+        83.10004135131835,
+        82.90544593811035,
+        82.56159553527831
+      ],
+      "duration_seconds": 1039.7011308670044,
+      "status": "ok"
+    }
+  ],
+  "outputs": {
+    "raw": "results/raw/sop_results.json",
+    "table": "results/tables/sop_table.md",
+    "figure": "results/figures/sop_comparison.png",
+    "log": "logs/sop.log"
+  }
+}

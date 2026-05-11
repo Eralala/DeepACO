@@ -1,0 +1,14 @@
+[2026-05-10T22:24:26] Starting OP reproduction
+[2026-05-10T22:24:26] sizes=[100, 200, 300], t_aco=[1, 10, 20, 30, 40, 50, 100], methods=['deepaco', 'aco'], device=cpu
+[2026-05-10T22:24:33] OP100: 100/100 instances, k_sparse=20
+[2026-05-10T22:54:48] Finished OP 100 DeepACO in 1815.33s
+[2026-05-10T23:21:06] Finished OP 100 ACO in 1577.82s
+[2026-05-10T23:21:12] OP200: 100/100 instances, k_sparse=50
+[2026-05-11T00:14:55] Finished OP 200 DeepACO in 3222.57s
+[2026-05-11T00:43:20] Finished OP 200 ACO in 1704.70s
+[2026-05-11T00:43:21] OP300: 100/100 instances, k_sparse=50
+[2026-05-11T01:34:27] Finished OP 300 DeepACO in 3065.92s
+[2026-05-11T02:13:04] Finished OP 300 ACO in 2317.22s
+[2026-05-11T02:13:05] Wrote raw results: results/raw/op_results.json
+[2026-05-11T02:13:05] Wrote table: results/tables/op_table.md
+[2026-05-11T02:13:05] Wrote figure: results/figures/op_comparison.png

@@ -1,0 +1,260 @@
+{
+  "problem": "pctsp",
+  "problem_display": "PCTSP",
+  "metric": "average objective",
+  "direction": "min",
+  "sizes": [
+    20,
+    100,
+    500
+  ],
+  "t_aco": [
+    1,
+    10,
+    20,
+    30,
+    40,
+    50,
+    100
+  ],
+  "methods": [
+    "deepaco",
+    "aco"
+  ],
+  "seed": 12345,
+  "limit_instances": null,
+  "environment": {
+    "timestamp": "2026-05-10T22:24:28",
+    "platform": "Windows-10-10.0.22621-SP0",
+    "python": "3.8.20",
+    "torch": "1.7.0+cu110",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 2060",
+    "device_used": "cpu",
+    "cwd": "E:\\DeepAoc"
+  },
+  "runs": [
+    {
+      "problem": "pctsp",
+      "problem_display": "PCTSP",
+      "scale": 20,
+      "scale_label": "20",
+      "method": "deepaco",
+      "method_label": "DeepACO",
+      "direction": "min",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/pctsp/pctsp20.pt",
+      "dataset_path": "data/pctsp/testDataset-20.pt",
+      "values": [
+        4.669727897644043,
+        4.1247844934463505,
+        4.051733953952789,
+        4.003649611473083,
+        3.9739803814888,
+        3.9574033188819886,
+        3.9274808883666994
+      ],
+      "duration_seconds": 339.861319065094,
+      "status": "ok"
+    },
+    {
+      "problem": "pctsp",
+      "problem_display": "PCTSP",
+      "scale": 20,
+      "scale_label": "20",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "min",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/pctsp/testDataset-20.pt",
+      "values": [
+        10.728755178451538,
+        8.64464036464691,
+        7.708010029792786,
+        7.252875089645386,
+        6.98944730758667,
+        6.817380347251892,
+        6.3675106382369995
+      ],
+      "duration_seconds": 351.8478534221649,
+      "status": "ok"
+    },
+    {
+      "problem": "pctsp",
+      "problem_display": "PCTSP",
+      "scale": 100,
+      "scale_label": "100",
+      "method": "deepaco",
+      "method_label": "DeepACO",
+      "direction": "min",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/pctsp/pctsp100.pt",
+      "dataset_path": "data/pctsp/testDataset-100.pt",
+      "values": [
+        9.852643165588379,
+        8.979135203361512,
+        8.723771810531616,
+        8.517902092933655,
+        8.421033835411071,
+        8.36602047920227,
+        8.15188093662262
+      ],
+      "duration_seconds": 1427.6933686733246,
+      "status": "ok"
+    },
+    {
+      "problem": "pctsp",
+      "problem_display": "PCTSP",
+      "scale": 100,
+      "scale_label": "100",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "min",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/pctsp/testDataset-100.pt",
+      "values": [
+        42.516115493774414,
+        39.061411666870114,
+        33.955723915100094,
+        26.859568653106688,
+        21.829674243927002,
+        19.18202547073364,
+        15.787935934066773
+      ],
+      "duration_seconds": 1964.9897203445435,
+      "status": "ok"
+    },
+    {
+      "problem": "pctsp",
+      "problem_display": "PCTSP",
+      "scale": 500,
+      "scale_label": "500",
+      "method": "deepaco",
+      "method_label": "DeepACO",
+      "direction": "min",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/pctsp/pctsp500.pt",
+      "dataset_path": "data/pctsp/testDataset-500.pt",
+      "values": [
+        23.251698703765868,
+        21.90747911453247,
+        21.484242267608643,
+        21.25294240951538,
+        21.069517555236818,
+        20.920291271209717,
+        20.603470420837404
+      ],
+      "duration_seconds": 2974.586799621582,
+      "status": "ok"
+    },
+    {
+      "problem": "pctsp",
+      "problem_display": "PCTSP",
+      "scale": 500,
+      "scale_label": "500",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "min",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/pctsp/testDataset-500.pt",
+      "values": [
+        189.95640426635742,
+        185.11042526245117,
+        182.11201110839843,
+        172.80687545776368,
+        148.26304275512695,
+        105.40304244995117,
+        39.793783035278324
+      ],
+      "duration_seconds": 3012.1252517700195,
+      "status": "ok"
+    }
+  ],
+  "outputs": {
+    "raw": "results/raw/pctsp_results.json",
+    "table": "results/tables/pctsp_table.md",
+    "figure": "results/figures/pctsp_comparison.png",
+    "log": "logs/pctsp.log"
+  }
+}

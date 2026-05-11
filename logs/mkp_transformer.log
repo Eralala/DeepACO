@@ -1,8 +1,12 @@
-[2026-05-09T23:30:43] Starting MKP-Transformer reproduction
-[2026-05-09T23:30:43] sizes=[300], t_aco=[1], methods=['deepaco'], device=cpu
-[2026-05-09T23:30:43] Generating missing MKP-Transformer dataset: data/mkp_transformer/testDataset-300.pt
-[2026-05-09T23:30:43] MKP-Transformer300: 1/100 instances
-[2026-05-09T23:30:43] Finished MKP-Transformer 300 DeepACO-Transformer in 0.35s
-[2026-05-09T23:30:44] Wrote raw results: results/raw/mkp_transformer_results.json
-[2026-05-09T23:30:44] Wrote table: results/tables/mkp_transformer_table.md
-[2026-05-09T23:30:44] Wrote figure: results/figures/mkp_transformer_comparison.png
+[2026-05-11T09:46:09] Starting MKP-Transformer reproduction
+[2026-05-11T09:46:09] sizes=[300, 500], t_aco=[1, 5, 10, 20, 50], methods=['deepaco', 'aco'], device=cpu
+[2026-05-11T09:46:09] MKP-Transformer300: 100/100 instances
+[2026-05-11T10:07:28] Finished MKP-Transformer 300 DeepACO-Transformer in 1278.61s
+[2026-05-11T10:26:02] Finished MKP-Transformer 300 ACO in 1114.54s
+[2026-05-11T10:26:02] Generating missing MKP-Transformer dataset: data/mkp_transformer/testDataset-500.pt
+[2026-05-11T10:26:03] MKP-Transformer500: 100/100 instances
+[2026-05-11T10:59:24] Finished MKP-Transformer 500 DeepACO-Transformer in 2001.11s
+[2026-05-11T11:28:31] Finished MKP-Transformer 500 ACO in 1747.18s
+[2026-05-11T11:28:33] Wrote raw results: results/raw/mkp_transformer_results.json
+[2026-05-11T11:28:33] Wrote table: results/tables/mkp_transformer_table.md
+[2026-05-11T11:28:33] Wrote figure: results/figures/mkp_transformer_comparison.png

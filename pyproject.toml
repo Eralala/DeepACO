@@ -13,6 +13,7 @@ dependencies = [
     "numpy==1.23.3",
     "numba==0.56.4",
     "tqdm>=4.64,<5",
+    "matplotlib>=3.7.5",
 ]
 
 [project.optional-dependencies]

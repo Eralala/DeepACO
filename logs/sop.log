@@ -1,0 +1,14 @@
+[2026-05-10T17:10:01] Starting SOP reproduction
+[2026-05-10T17:10:01] sizes=[20, 50, 100], t_aco=[1, 10, 20, 30, 40, 50, 100], methods=['deepaco', 'aco'], device=cpu
+[2026-05-10T17:10:02] SOP20: 100/100 instances
+[2026-05-10T17:11:11] Finished SOP 20 DeepACO in 69.05s
+[2026-05-10T17:12:22] Finished SOP 20 ACO in 70.94s
+[2026-05-10T17:12:22] SOP50: 100/100 instances
+[2026-05-10T17:17:15] Finished SOP 50 DeepACO in 292.56s
+[2026-05-10T17:22:01] Finished SOP 50 ACO in 286.11s
+[2026-05-10T17:22:01] SOP100: 100/100 instances
+[2026-05-10T17:37:43] Finished SOP 100 DeepACO in 942.03s
+[2026-05-10T17:55:03] Finished SOP 100 ACO in 1039.70s
+[2026-05-10T17:55:04] Wrote raw results: results/raw/sop_results.json
+[2026-05-10T17:55:04] Wrote table: results/tables/sop_table.md
+[2026-05-10T17:55:04] Wrote figure: results/figures/sop_comparison.png

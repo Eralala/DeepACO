@@ -1,7 +1,8 @@
-[2026-05-09T23:30:24] Starting BPP reproduction
-[2026-05-09T23:30:24] sizes=[120], t_aco=[1], methods=['deepaco'], device=cpu
-[2026-05-09T23:30:26] BPP120: 1/100 instances
-[2026-05-09T23:30:28] Finished BPP 120 DeepACO in 2.23s
-[2026-05-09T23:30:29] Wrote raw results: results/raw/bpp_results.json
-[2026-05-09T23:30:29] Wrote table: results/tables/bpp_table.md
-[2026-05-09T23:30:29] Wrote figure: results/figures/bpp_comparison.png
+[2026-05-11T09:46:33] Starting BPP reproduction
+[2026-05-11T09:46:33] sizes=[120], t_aco=[1, 5, 10, 20], methods=['deepaco', 'aco'], device=cpu
+[2026-05-11T09:46:35] BPP120: 100/100 instances
+[2026-05-11T09:49:51] Finished BPP 120 DeepACO in 195.21s
+[2026-05-11T09:52:58] Finished BPP 120 ACO in 186.78s
+[2026-05-11T09:53:00] Wrote raw results: results/raw/bpp_results.json
+[2026-05-11T09:53:00] Wrote table: results/tables/bpp_table.md
+[2026-05-11T09:53:00] Wrote figure: results/figures/bpp_comparison.png

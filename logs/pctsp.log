@@ -1,0 +1,14 @@
+[2026-05-10T22:24:28] Starting PCTSP reproduction
+[2026-05-10T22:24:28] sizes=[20, 100, 500], t_aco=[1, 10, 20, 30, 40, 50, 100], methods=['deepaco', 'aco'], device=cpu
+[2026-05-10T22:24:29] PCTSP20: 100/100 instances
+[2026-05-10T22:30:09] Finished PCTSP 20 DeepACO in 339.86s
+[2026-05-10T22:36:01] Finished PCTSP 20 ACO in 351.85s
+[2026-05-10T22:36:01] PCTSP100: 100/100 instances
+[2026-05-10T22:59:49] Finished PCTSP 100 DeepACO in 1427.69s
+[2026-05-10T23:32:34] Finished PCTSP 100 ACO in 1964.99s
+[2026-05-10T23:32:35] PCTSP500: 100/100 instances
+[2026-05-11T00:22:09] Finished PCTSP 500 DeepACO in 2974.59s
+[2026-05-11T01:12:21] Finished PCTSP 500 ACO in 3012.13s
+[2026-05-11T01:12:22] Wrote raw results: results/raw/pctsp_results.json
+[2026-05-11T01:12:22] Wrote table: results/tables/pctsp_table.md
+[2026-05-11T01:12:22] Wrote figure: results/figures/pctsp_comparison.png

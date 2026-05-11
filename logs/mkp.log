@@ -1,0 +1,11 @@
+[2026-05-11T09:46:02] Starting MKP reproduction
+[2026-05-11T09:46:02] sizes=[300, 500], t_aco=[1, 10, 20, 30, 40, 50, 100], methods=['deepaco', 'aco'], device=cpu
+[2026-05-11T09:46:05] MKP300: 100/100 instances
+[2026-05-11T10:26:06] Finished MKP 300 DeepACO-GNN in 2400.75s
+[2026-05-11T10:59:44] Finished MKP 300 ACO in 2017.85s
+[2026-05-11T10:59:44] MKP500: 100/100 instances
+[2026-05-11T12:00:48] Finished MKP 500 DeepACO-GNN in 3664.66s
+[2026-05-11T12:45:35] Finished MKP 500 ACO in 2686.56s
+[2026-05-11T12:45:36] Wrote raw results: results/raw/mkp_results.json
+[2026-05-11T12:45:36] Wrote table: results/tables/mkp_table.md
+[2026-05-11T12:45:36] Wrote figure: results/figures/mkp_comparison.png

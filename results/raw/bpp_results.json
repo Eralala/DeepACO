@@ -7,22 +7,26 @@
     120
   ],
   "t_aco": [
-    1
+    1,
+    5,
+    10,
+    20
   ],
   "methods": [
-    "deepaco"
+    "deepaco",
+    "aco"
   ],
   "seed": 12345,
-  "limit_instances": 1,
+  "limit_instances": null,
   "environment": {
-    "timestamp": "2026-05-09T23:30:24",
-    "platform": "Windows-10-10.0.26200-SP0",
+    "timestamp": "2026-05-11T09:46:33",
+    "platform": "Windows-10-10.0.22621-SP0",
     "python": "3.8.20",
     "torch": "1.7.0+cu110",
     "cuda_available": true,
-    "cuda_device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "cuda_device": "NVIDIA GeForce RTX 2060",
     "device_used": "cpu",
-    "cwd": "C:\\Users\\86136\\Desktop\\DeepACO"
+    "cwd": "E:\\DeepAoc"
   },
   "runs": [
     {
@@ -35,18 +39,54 @@
       "direction": "max",
       "metric": "average fitness",
       "t_aco": [
-        1
+        1,
+        5,
+        10,
+        20
       ],
       "dataset_instances": 100,
-      "instances": 1,
+      "instances": 100,
       "n_ants": 20,
       "device": "cpu",
       "checkpoint": "pretrained/bpp/bpp120.pt",
       "dataset_path": "data/bpp/testDataset-120.pt",
       "values": [
-        0.9304388761520386
+        0.9452069360017776,
+        0.9511654019355774,
+        0.9539339172840119,
+        0.9558246433734894
       ],
-      "duration_seconds": 2.2288670539855957,
+      "duration_seconds": 195.2133445739746,
+      "status": "ok"
+    },
+    {
+      "problem": "bpp",
+      "problem_display": "BPP",
+      "scale": 120,
+      "scale_label": "120",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "max",
+      "metric": "average fitness",
+      "t_aco": [
+        1,
+        5,
+        10,
+        20
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/bpp/testDataset-120.pt",
+      "values": [
+        0.8772623604536056,
+        0.8943829190731049,
+        0.9013912212848664,
+        0.9074166965484619
+      ],
+      "duration_seconds": 186.7754099369049,
       "status": "ok"
     }
   ],

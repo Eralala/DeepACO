@@ -2,6 +2,8 @@
 
 import os
 import platform
+import itertools
+import threading
 from ctypes import (
     Structure,
     CDLL,
@@ -22,6 +24,8 @@ import torch
 import random
 import time
 
+basedir = os.path.dirname(os.path.realpath(__file__))
+
 def write_routes(routes: List[List[int]], filepath: str):
     with open(filepath, "w") as f:
         for i, r in enumerate(routes):
@@ -40,22 +44,54 @@ def read_routes(filepath):
     return routes
 
 def get_lib_filename():
-    path = "HGS-CVRP-main/build/libhgscvrp.so"
-    if os.path.isfile(path):
-        return path
+    build_dir = os.path.join(basedir, "HGS-CVRP-main", "build")
+    system = platform.system()
+    if system == "Windows":
+        candidates = [os.path.join(build_dir, "hgscvrp.dll")]
+    elif system == "Darwin":
+        candidates = [os.path.join(build_dir, "libhgscvrp.dylib")]
     else:
-        raise FileNotFoundError(f"Shared library file `{path}` not found")
+        candidates = [os.path.join(build_dir, "libhgscvrp.so")]
+
+    for path in candidates:
+        if os.path.isfile(path):
+            return path
+    raise FileNotFoundError(
+        "HGS-CVRP shared library not found for this platform. "
+        f"Expected one of: {', '.join(candidates)}"
+    )
 
 
-# basedir = os.path.abspath(os.path.dirname(__file__))
-basedir = os.path.dirname(os.path.realpath(__file__))
 # os.add_dll_directory(basedir)
-HGS_LIBRARY_FILEPATH = os.path.join(basedir, get_lib_filename())
+HGS_LIBRARY_FILEPATH = get_lib_filename()
 
 c_double_p = POINTER(c_double)
 c_int_p = POINTER(c_int)
 C_INT_MAX = 2 ** (sizeof(c_int) * 8 - 1) - 1
 C_DBL_MAX = sys.float_info.max
+_CALLID_LOCK = threading.Lock()
+_CALLID_COUNTER = itertools.count(random.randint(0, C_INT_MAX - 1))
+
+
+def next_callid():
+    with _CALLID_LOCK:
+        return next(_CALLID_COUNTER) % C_INT_MAX
+
+
+def remove_file(path: str):
+    for attempt in range(5):
+        try:
+            os.remove(path)
+            return
+        except FileNotFoundError:
+            return
+        except PermissionError:
+            if platform.system() == "Windows":
+                time.sleep(0.05 * (attempt + 1))
+                continue
+            raise
+    if platform.system() != "Windows":
+        os.remove(path)
 
 
 # Must match with AlgorithmParameters.h in HGS-CVRP: https://github.com/vidalt/HGS-CVRP
@@ -237,11 +273,12 @@ class Solver:
         assert dist_mtx.shape[0] == dist_mtx.shape[1]
         assert (dist_mtx >= 0.0).all()
 
-        callid = (time.time_ns()*10000+random.randint(0,10000))%C_INT_MAX
+        callid = next_callid()
 
         tmppath = "/tmp/route-{}".format(callid)
         resultpath = "/tmp/swapstar-result-{}".format(callid)
         write_routes(routes, tmppath)
+        result = routes
         try:
             self._local_search(
                 x_coords,
@@ -263,10 +300,11 @@ class Solver:
         except Exception as e:
             print(routes)
             print([demand[r].sum() for r in routes])
+            print(e)
         else:
-            os.remove(resultpath)
+            remove_file(resultpath)
         finally:
-            os.remove(tmppath)
+            remove_file(tmppath)
         
         return result
 

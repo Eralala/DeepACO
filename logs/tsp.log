@@ -1,7 +1,14 @@
-[2026-05-10T00:08:10] Starting TSP reproduction
-[2026-05-10T00:08:10] sizes=[20], t_aco=[1], methods=['deepaco'], device=cpu
-[2026-05-10T00:08:12] TSP20: 1/1280 instances, k_sparse=10
-[2026-05-10T00:08:12] Finished TSP 20 DeepACO in 0.03s
-[2026-05-10T00:08:12] Wrote raw results: results/raw/tsp_results.json
-[2026-05-10T00:08:12] Wrote table: results/tables/tsp_table.md
-[2026-05-10T00:08:12] Wrote figure: results/figures/tsp_comparison.png
+[2026-05-10T17:15:06] Starting TSP reproduction
+[2026-05-10T17:15:06] sizes=[20, 100, 500], t_aco=[1, 10, 20, 30, 40, 50, 100], methods=['deepaco', 'aco'], device=cuda:0
+[2026-05-10T17:15:08] TSP20: 1280/1280 instances, k_sparse=10
+[2026-05-10T18:07:07] Finished TSP 20 DeepACO in 3118.74s
+[2026-05-10T19:02:56] Finished TSP 20 ACO in 3349.19s
+[2026-05-10T19:02:58] TSP100: 1280/1280 instances, k_sparse=10
+[2026-05-10T21:55:33] Finished TSP 100 DeepACO in 10354.73s
+[2026-05-11T00:35:41] Finished TSP 100 ACO in 9608.05s
+[2026-05-11T00:35:41] TSP500: 128/128 instances, k_sparse=50
+[2026-05-11T01:23:12] Finished TSP 500 DeepACO in 2850.26s
+[2026-05-11T02:06:49] Finished TSP 500 ACO in 2617.35s
+[2026-05-11T02:06:49] Wrote raw results: results/raw/tsp_results.json
+[2026-05-11T02:06:49] Wrote table: results/tables/tsp_table.md
+[2026-05-11T02:06:49] Wrote figure: results/figures/tsp_comparison.png

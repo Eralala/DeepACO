@@ -1,0 +1,260 @@
+{
+  "problem": "smtwtp",
+  "problem_display": "SMTWTP",
+  "metric": "average weighted tardiness",
+  "direction": "min",
+  "sizes": [
+    50,
+    100,
+    500
+  ],
+  "t_aco": [
+    1,
+    10,
+    20,
+    30,
+    40,
+    50,
+    100
+  ],
+  "methods": [
+    "deepaco",
+    "aco"
+  ],
+  "seed": 12345,
+  "limit_instances": null,
+  "environment": {
+    "timestamp": "2026-05-10T17:15:27",
+    "platform": "Windows-10-10.0.22621-SP0",
+    "python": "3.8.20",
+    "torch": "1.7.0+cu110",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 2060",
+    "device_used": "cpu",
+    "cwd": "E:\\DeepAoc"
+  },
+  "runs": [
+    {
+      "problem": "smtwtp",
+      "problem_display": "SMTWTP",
+      "scale": 50,
+      "scale_label": "50",
+      "method": "deepaco",
+      "method_label": "DeepACO",
+      "direction": "min",
+      "metric": "average weighted tardiness",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/smtwtp/smtwtp50.pt",
+      "dataset_path": "data/smtwtp/test50.pkl",
+      "values": [
+        0.25119888360612097,
+        0.2352514175104443,
+        0.23190120590501465,
+        0.2309579185920302,
+        0.23073533549788408,
+        0.23073533549788408,
+        0.22979074824484996
+      ],
+      "duration_seconds": 124.50102972984314,
+      "status": "ok"
+    },
+    {
+      "problem": "smtwtp",
+      "problem_display": "SMTWTP",
+      "scale": 50,
+      "scale_label": "50",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "min",
+      "metric": "average weighted tardiness",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/smtwtp/test50.pkl",
+      "values": [
+        6.013745803833007,
+        3.0838544227555396,
+        2.3013627775851635,
+        1.8567740987043362,
+        1.5232416505832225,
+        1.2472122811619193,
+        0.8279907021066174
+      ],
+      "duration_seconds": 111.1795756816864,
+      "status": "ok"
+    },
+    {
+      "problem": "smtwtp",
+      "problem_display": "SMTWTP",
+      "scale": 100,
+      "scale_label": "100",
+      "method": "deepaco",
+      "method_label": "DeepACO",
+      "direction": "min",
+      "metric": "average weighted tardiness",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/smtwtp/smtwtp100.pt",
+      "dataset_path": "data/smtwtp/test100.pkl",
+      "values": [
+        0.3165480525838211,
+        0.2685063302097842,
+        0.26073977481108157,
+        0.25768513712566343,
+        0.25648136648815123,
+        0.25591654035728423,
+        0.25402273449581114
+      ],
+      "duration_seconds": 239.0365653038025,
+      "status": "ok"
+    },
+    {
+      "problem": "smtwtp",
+      "problem_display": "SMTWTP",
+      "scale": 100,
+      "scale_label": "100",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "min",
+      "metric": "average weighted tardiness",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/smtwtp/test100.pkl",
+      "values": [
+        31.552292882204057,
+        20.86483386695385,
+        18.035288305655122,
+        16.188453189507126,
+        14.177020891085267,
+        12.48538271524012,
+        7.029400994032621
+      ],
+      "duration_seconds": 228.10503911972046,
+      "status": "ok"
+    },
+    {
+      "problem": "smtwtp",
+      "problem_display": "SMTWTP",
+      "scale": 500,
+      "scale_label": "500",
+      "method": "deepaco",
+      "method_label": "DeepACO",
+      "direction": "min",
+      "metric": "average weighted tardiness",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/smtwtp/smtwtp500.pt",
+      "dataset_path": "data/smtwtp/test500.pkl",
+      "values": [
+        1.2570331797748804,
+        0.7876679180224891,
+        0.7120422762737144,
+        0.657215959194582,
+        0.6333548334310762,
+        0.6140078673139214,
+        0.5981360769318417
+      ],
+      "duration_seconds": 1831.9695646762848,
+      "status": "ok"
+    },
+    {
+      "problem": "smtwtp",
+      "problem_display": "SMTWTP",
+      "scale": 500,
+      "scale_label": "500",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "min",
+      "metric": "average weighted tardiness",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/smtwtp/test500.pkl",
+      "values": [
+        1070.5783764648438,
+        912.0624279785156,
+        883.5414056396485,
+        868.8178491210938,
+        850.5689038085937,
+        837.6156433105468,
+        648.9013555908203
+      ],
+      "duration_seconds": 1953.432851076126,
+      "status": "ok"
+    }
+  ],
+  "outputs": {
+    "raw": "results/raw/smtwtp_results.json",
+    "table": "results/tables/smtwtp_table.md",
+    "figure": "results/figures/smtwtp_comparison.png",
+    "log": "logs/smtwtp.log"
+  }
+}

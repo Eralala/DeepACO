@@ -1,7 +1,14 @@
-[2026-05-09T23:33:31] Starting RCPSP reproduction
-[2026-05-09T23:33:31] sizes=[30], t_aco=[1], methods=['deepaco'], device=cpu
-[2026-05-09T23:33:34] RCPSP j30: 1/100 instances
-[2026-05-09T23:33:34] Finished RCPSP j30 DeepACO in 0.09s
-[2026-05-09T23:33:35] Wrote raw results: results/raw/rcpsp_results.json
-[2026-05-09T23:33:35] Wrote table: results/tables/rcpsp_table.md
-[2026-05-09T23:33:35] Wrote figure: results/figures/rcpsp_comparison.png
+[2026-05-10T18:25:06] Starting RCPSP reproduction
+[2026-05-10T18:25:06] sizes=[30, 60, 120], t_aco=[1, 10, 20, 30, 40, 50, 100], methods=['deepaco', 'aco'], device=cpu
+[2026-05-10T18:25:10] RCPSP j30: 100/100 instances
+[2026-05-10T18:35:18] Finished RCPSP j30 DeepACO in 607.24s
+[2026-05-10T18:45:04] Finished RCPSP j30 ACO in 585.96s
+[2026-05-10T18:45:07] RCPSP j60: 100/100 instances
+[2026-05-10T19:05:07] Finished RCPSP j60 DeepACO in 1199.47s
+[2026-05-10T19:27:13] Finished RCPSP j60 ACO in 1326.00s
+[2026-05-10T19:27:29] RCPSP j120: 100/100 instances
+[2026-05-10T20:13:54] Finished RCPSP j120 DeepACO in 2785.04s
+[2026-05-10T20:58:24] Finished RCPSP j120 ACO in 2669.81s
+[2026-05-10T20:58:25] Wrote raw results: results/raw/rcpsp_results.json
+[2026-05-10T20:58:25] Wrote table: results/tables/rcpsp_table.md
+[2026-05-10T20:58:25] Wrote figure: results/figures/rcpsp_comparison.png

@@ -1,0 +1,187 @@
+{
+  "problem": "mkp",
+  "problem_display": "MKP",
+  "metric": "average objective",
+  "direction": "max",
+  "sizes": [
+    300,
+    500
+  ],
+  "t_aco": [
+    1,
+    10,
+    20,
+    30,
+    40,
+    50,
+    100
+  ],
+  "methods": [
+    "deepaco",
+    "aco"
+  ],
+  "seed": 12345,
+  "limit_instances": null,
+  "environment": {
+    "timestamp": "2026-05-11T09:46:02",
+    "platform": "Windows-10-10.0.22621-SP0",
+    "python": "3.8.20",
+    "torch": "1.7.0+cu110",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 2060",
+    "device_used": "cpu",
+    "cwd": "E:\\DeepAoc"
+  },
+  "runs": [
+    {
+      "problem": "mkp",
+      "problem_display": "MKP",
+      "scale": 300,
+      "scale_label": "300",
+      "method": "deepaco",
+      "method_label": "DeepACO-GNN",
+      "direction": "max",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/mkp/mkp300.pt",
+      "dataset_path": "data/mkp/testDataset-300.pt",
+      "values": [
+        57.800158333778384,
+        59.00846887588501,
+        59.48022348880768,
+        59.816333303451536,
+        59.994985461235046,
+        60.142163438797,
+        60.78207518577576
+      ],
+      "duration_seconds": 2400.746340274811,
+      "status": "ok"
+    },
+    {
+      "problem": "mkp",
+      "problem_display": "MKP",
+      "scale": 300,
+      "scale_label": "300",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "max",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/mkp/testDataset-300.pt",
+      "values": [
+        44.29428650379181,
+        47.289737215042116,
+        48.857914505004885,
+        50.982731666564945,
+        53.36704035758972,
+        55.477217779159545,
+        58.74818801879883
+      ],
+      "duration_seconds": 2017.8529109954834,
+      "status": "ok"
+    },
+    {
+      "problem": "mkp",
+      "problem_display": "MKP",
+      "scale": 500,
+      "scale_label": "500",
+      "method": "deepaco",
+      "method_label": "DeepACO-GNN",
+      "direction": "max",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/mkp/mkp500.pt",
+      "dataset_path": "data/mkp/testDataset-500.pt",
+      "values": [
+        98.51384379386901,
+        99.7143091583252,
+        100.16589334487915,
+        100.6488610458374,
+        100.93783033370971,
+        101.17957426071168,
+        101.77771802902221
+      ],
+      "duration_seconds": 3664.663571834564,
+      "status": "ok"
+    },
+    {
+      "problem": "mkp",
+      "problem_display": "MKP",
+      "scale": 500,
+      "scale_label": "500",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "max",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        100
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/mkp/testDataset-500.pt",
+      "values": [
+        70.3978579902649,
+        74.16855779647827,
+        76.25655958175659,
+        79.30481349945069,
+        83.78068092346192,
+        87.7627728652954,
+        96.15240488052368
+      ],
+      "duration_seconds": 2686.5593118667603,
+      "status": "ok"
+    }
+  ],
+  "outputs": {
+    "raw": "results/raw/mkp_results.json",
+    "table": "results/tables/mkp_table.md",
+    "figure": "results/figures/mkp_comparison.png",
+    "log": "logs/mkp.log"
+  }
+}

@@ -1,5 +1,6 @@
 import torch
 from torch.distributions import Categorical
+import os
 import random
 import itertools
 import numpy as np
@@ -8,6 +9,14 @@ from functools import cached_property
 import concurrent.futures
 
 CAPACITY = 1.0 # The input demands shall be normalized
+
+def swapstar_worker_count():
+    value = os.environ.get("CVRP_NLS_SWAPSTAR_WORKERS")
+    if value:
+        return max(1, int(value))
+    if os.name == "nt":
+        return 1
+    return None
 
 def get_subroutes(route, end_with_zero = True):
     x = torch.nonzero(route == 0).flatten()
@@ -116,7 +125,7 @@ class ACO():
         for i in range(paths.size(1)) if indexes is None else indexes:
             subroutes = get_subroutes(paths[:, i])
             subroutes_all.append((i, subroutes))
-        with concurrent.futures.ThreadPoolExecutor() as executor:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=swapstar_worker_count()) as executor:
             futures = []
             for i, p in subroutes_all:
                 future = executor.submit(neural_swapstar, self.demand_cpu, self.distances_cpu, self.heuristic_dist, self.positions_cpu, p,

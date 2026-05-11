@@ -4,25 +4,31 @@
   "metric": "average objective",
   "direction": "max",
   "sizes": [
-    300
+    300,
+    500
   ],
   "t_aco": [
-    1
+    1,
+    5,
+    10,
+    20,
+    50
   ],
   "methods": [
-    "deepaco"
+    "deepaco",
+    "aco"
   ],
   "seed": 12345,
-  "limit_instances": 1,
+  "limit_instances": null,
   "environment": {
-    "timestamp": "2026-05-09T23:30:43",
-    "platform": "Windows-10-10.0.26200-SP0",
+    "timestamp": "2026-05-11T09:46:09",
+    "platform": "Windows-10-10.0.22621-SP0",
     "python": "3.8.20",
     "torch": "1.7.0+cu110",
     "cuda_available": true,
-    "cuda_device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "cuda_device": "NVIDIA GeForce RTX 2060",
     "device_used": "cpu",
-    "cwd": "C:\\Users\\86136\\Desktop\\DeepACO"
+    "cwd": "E:\\DeepAoc"
   },
   "runs": [
     {
@@ -35,18 +41,122 @@
       "direction": "max",
       "metric": "average objective",
       "t_aco": [
-        1
+        1,
+        5,
+        10,
+        20,
+        50
       ],
       "dataset_instances": 100,
-      "instances": 1,
+      "instances": 100,
       "n_ants": 20,
       "device": "cpu",
       "checkpoint": "pretrained/mkp_transformer/mkp300.pt",
       "dataset_path": "data/mkp_transformer/testDataset-300.pt",
       "values": [
-        59.434364318847656
+        62.88565538406372,
+        63.16143003463745,
+        63.203530673980715,
+        63.26441761016846,
+        63.32334201812744
       ],
-      "duration_seconds": 0.35050010681152344,
+      "duration_seconds": 1278.6092290878296,
+      "status": "ok"
+    },
+    {
+      "problem": "mkp_transformer",
+      "problem_display": "MKP-Transformer",
+      "scale": 300,
+      "scale_label": "300",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "max",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        5,
+        10,
+        20,
+        50
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/mkp_transformer/testDataset-300.pt",
+      "values": [
+        46.690289907455444,
+        55.492968816757205,
+        58.22308799743652,
+        60.26407293319702,
+        61.841810607910155
+      ],
+      "duration_seconds": 1114.5392091274261,
+      "status": "ok"
+    },
+    {
+      "problem": "mkp_transformer",
+      "problem_display": "MKP-Transformer",
+      "scale": 500,
+      "scale_label": "500",
+      "method": "deepaco",
+      "method_label": "DeepACO-Transformer",
+      "direction": "max",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        5,
+        10,
+        20,
+        50
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": "pretrained/mkp_transformer/mkp500.pt",
+      "dataset_path": "data/mkp_transformer/testDataset-500.pt",
+      "values": [
+        101.66654684066772,
+        102.4943670463562,
+        102.7627938079834,
+        102.96781656265259,
+        103.29673128128051
+      ],
+      "duration_seconds": 2001.1145355701447,
+      "status": "ok"
+    },
+    {
+      "problem": "mkp_transformer",
+      "problem_display": "MKP-Transformer",
+      "scale": 500,
+      "scale_label": "500",
+      "method": "aco",
+      "method_label": "ACO",
+      "direction": "max",
+      "metric": "average objective",
+      "t_aco": [
+        1,
+        5,
+        10,
+        20,
+        50
+      ],
+      "dataset_instances": 100,
+      "instances": 100,
+      "n_ants": 20,
+      "device": "cpu",
+      "checkpoint": null,
+      "dataset_path": "data/mkp_transformer/testDataset-500.pt",
+      "values": [
+        75.32420764923096,
+        89.3762472820282,
+        94.02256622314454,
+        97.9440179824829,
+        101.0046976852417
+      ],
+      "duration_seconds": 1747.1779804229736,
       "status": "ok"
     }
   ],

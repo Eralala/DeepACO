@@ -1,0 +1,172 @@
+{
+  "problem": "tsp_nls",
+  "problem_display": "TSP-NLS",
+  "metric": "average cost",
+  "direction": "min",
+  "sizes": [
+    100,
+    500,
+    1000
+  ],
+  "t_aco": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "methods": [
+    "deepaco"
+  ],
+  "seed": 12345,
+  "limit_instances": null,
+  "environment": {
+    "timestamp": "2026-05-10T17:09:33",
+    "platform": "Windows-10-10.0.22621-SP0",
+    "python": "3.8.20",
+    "torch": "1.7.0+cu110",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 2060",
+    "device_used": "cuda:0",
+    "cwd": "E:\\DeepAoc"
+  },
+  "runs": [
+    {
+      "problem": "tsp_nls",
+      "problem_display": "TSP-NLS",
+      "scale": 100,
+      "scale_label": "100",
+      "method": "deepaco",
+      "method_label": "DeepACO-NLS",
+      "direction": "min",
+      "metric": "average cost",
+      "t_aco": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "dataset_instances": 1280,
+      "instances": 1280,
+      "n_ants": 48,
+      "device": "cuda:0",
+      "checkpoint": "pretrained/tsp_nls/tsp100.pt",
+      "dataset_path": "data/tsp/testDataset-100.pt",
+      "values": [
+        7.776587300747633,
+        7.7697365041822195,
+        7.7668573770672085,
+        7.764971425756812,
+        7.763786033168435,
+        7.762932403385639,
+        7.762298979237675,
+        7.761790278926492,
+        7.761421849578619,
+        7.7610360506922005
+      ],
+      "duration_seconds": 3012.2746200561523,
+      "status": "ok"
+    },
+    {
+      "problem": "tsp_nls",
+      "problem_display": "TSP-NLS",
+      "scale": 500,
+      "scale_label": "500",
+      "method": "deepaco",
+      "method_label": "DeepACO-NLS",
+      "direction": "min",
+      "metric": "average cost",
+      "t_aco": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "dataset_instances": 128,
+      "instances": 128,
+      "n_ants": 48,
+      "device": "cuda:0",
+      "checkpoint": "pretrained/tsp_nls/tsp500.pt",
+      "dataset_path": "data/tsp/testDataset-500.pt",
+      "values": [
+        16.978043422102928,
+        16.928582191467285,
+        16.907531052827835,
+        16.88964380323887,
+        16.875228494405746,
+        16.867119878530502,
+        16.857646375894547,
+        16.852828785777092,
+        16.849278658628464,
+        16.842592149972916
+      ],
+      "duration_seconds": 3951.184382915497,
+      "status": "ok"
+    },
+    {
+      "problem": "tsp_nls",
+      "problem_display": "TSP-NLS",
+      "scale": 1000,
+      "scale_label": "1000",
+      "method": "deepaco",
+      "method_label": "DeepACO-NLS",
+      "direction": "min",
+      "metric": "average cost",
+      "t_aco": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "dataset_instances": 128,
+      "instances": 128,
+      "n_ants": 48,
+      "device": "cuda:0",
+      "checkpoint": "pretrained/tsp_nls/tsp1000.pt",
+      "dataset_path": "data/tsp/testDataset-1000.pt",
+      "values": [
+        24.024721711874008,
+        23.942889243364334,
+        23.913579300045967,
+        23.887854650616646,
+        23.863515719771385,
+        23.850393563508987,
+        23.84249936044216,
+        23.832289323210716,
+        23.8262609988451,
+        23.821096822619438
+      ],
+      "duration_seconds": 17957.84705710411,
+      "status": "ok"
+    }
+  ],
+  "outputs": {
+    "raw": "results/raw/tsp_nls_results.json",
+    "table": "results/tables/tsp_nls_table.md",
+    "figure": "results/figures/tsp_nls_comparison.png",
+    "log": "logs/tsp_nls.log"
+  }
+}
